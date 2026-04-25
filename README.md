@@ -19,40 +19,56 @@ Clone The Repository
 1. Open a terminal.
 2. Clone the repository:
 
-	 git clone <your-repo-url>
+```bash
+git clone <your-repo-url>
+```
 
 3. Move into the project folder:
 
-	 cd climate-challenge-week0
+```bash
+cd climate-challenge-week0
+```
 
 Set Up A Local Python Environment
 
 Create a virtual environment:
 
+```bash
 python -m venv .venv
+```
 
 Activate it:
 
 Windows PowerShell:
 
+```powershell
 .\\.venv\\Scripts\\Activate.ps1
+```
 
 Windows Command Prompt:
 
+```bat
 .venv\\Scripts\\activate.bat
+```
 
 macOS/Linux:
 
+```bash
 source .venv/bin/activate
+```
 
 If PowerShell blocks activation, run this once in PowerShell and then reactivate:
 
+```powershell
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```
 
 Install Dependencies
 
+```bash
 pip install --upgrade pip
 pip install -r requirements.txt
+```
 
 Run The Project Locally
 
@@ -60,21 +76,29 @@ This starter repo does not yet include a single app entrypoint. Use one of these
 
 - Run a module from src:
 
-	python -m src.<module_name>
+```bash
+python -m src.<module_name>
+```
 
 - Run a script from scripts:
 
-	python scripts/<script_name>.py
+```bash
+python scripts/<script_name>.py
+```
 
 Run Tests
 
 Install pytest if needed:
 
+```bash
 pip install pytest
+```
 
 Run all tests:
 
+```bash
 python -m pytest
+```
 
 Notes
 
