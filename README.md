@@ -1,54 +1,39 @@
 Climate Challenge Week 0
 
-This repository is a starter structure for Python-based climate challenge work.
+This repository contains the Week 0 climate analysis starter work for five countries: Ethiopia, Kenya, Nigeria, Sudan, and Tanzania. The raw and cleaned CSV files live in `data/`, and the exploratory notebooks for each country live in `notebooks/`.
 
-Project Structure
+What is in the repo
 
-- src: source code
-- scripts: helper scripts for running tasks
-- tests: automated tests
-- notebooks: exploratory notebooks
+- `data/`: country climate datasets and the data legend
+- `notebooks/`: EDA notebooks for Ethiopia, Kenya, Nigeria, Sudan, and Tanzania
+- `src/`: Python package scaffold for reusable code
+- `scripts/`: helper scripts for running tasks
+- `tests/`: automated test scaffold
 
-Prerequisites
+Data source
 
-- Git
-- Python 3.11 or newer
+The datasets come from NASA POWER MERRA-2 reanalysis data. The included country files cover daily observations from 2015-01-01 through 2026-03-31 using representative capital-city coordinates.
 
-Clone The Repository
+Environment setup
 
-1. Open a terminal.
-2. Clone the repository:
-
-```bash
-git clone <your-repo-url>
-```
-
-3. Move into the project folder:
-
-```bash
-cd climate-challenge-week0
-```
-
-Set Up A Local Python Environment
-
-Create a virtual environment:
+1. Create a virtual environment.
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it:
+2. Activate it.
 
 Windows PowerShell:
 
 ```powershell
-.\\.venv\\Scripts\\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 ```
 
 Windows Command Prompt:
 
 ```bat
-.venv\\Scripts\\activate.bat
+.venv\Scripts\activate.bat
 ```
 
 macOS/Linux:
@@ -57,44 +42,32 @@ macOS/Linux:
 source .venv/bin/activate
 ```
 
-If PowerShell blocks activation, run this once in PowerShell and then reactivate:
+If PowerShell blocks activation, run this once and then reactivate:
 
 ```powershell
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 ```
 
-Install Dependencies
+Install dependencies
 
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Run The Project Locally
+Working with the notebooks
 
-This starter repo does not yet include a single app entrypoint. Use one of these patterns as you add code:
+Open the notebooks in Jupyter or VS Code and run them country by country:
 
-- Run a module from src:
+- `notebooks/ethiopia_eda.ipynb`
+- `notebooks/kenya_eda.ipynb`
+- `notebooks/nigeria_eda.ipynb`
+- `notebooks/sudan_eda.ipynb`
+- `notebooks/tanzania_eda.ipynb`
 
-```bash
-python -m src.<module_name>
-```
+Python packages used in this repo include `pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly`, `scipy`, `statsmodels`, `scikit-learn`, `jupyter`, `ipykernel`, `openpyxl`, and `xlrd`.
 
-- Run a script from scripts:
-
-```bash
-python scripts/<script_name>.py
-```
-
-Run Tests
-
-Install pytest if needed:
-
-```bash
-pip install pytest
-```
-
-Run all tests:
+Running tests
 
 ```bash
 python -m pytest
@@ -102,5 +75,5 @@ python -m pytest
 
 Notes
 
-- The CI workflow is in .github/workflows/unittests.yml.
-- CI triggers on pushes to main and on pull requests.
+- The repository is organized for exploratory analysis first, with `src/` and `scripts/` available for any reusable code or automation you add later.
+- The data legend in `data/Data Legend.txt` describes the source, variables, and missing-value convention used in the CSV files.
